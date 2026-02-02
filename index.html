@@ -12,7 +12,7 @@
     
     <!--adding logo -->
     <link rel="icon" type="image/png" href="logo.png">
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -78,7 +78,8 @@
 
         <!-- Footer -->
         <footer>
-            <p>Crevate Technology © 2024</p>
+
+            <p> <span id="copyright-year"></span> © Crevate Technology  </p>
         </footer>
     </div>
 
@@ -87,6 +88,12 @@
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-messaging-compat.js"></script>
     
+    <!--script for copyright change  -->
+    <script>
+        const year = new Date().getFullYear();
+        document.querySelector('footer p').textContent = `Crevate Technology © ${year}`;
+
+    </script>
     <!-- Your App Scripts -->
     <script src="firebase-config.js"></script>
     <script src="app.js"></script>
