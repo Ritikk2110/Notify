@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#6366f1">
+    <title>Crevate Notifications</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">🔔</div>
+            <h1>Crevate Notifications</h1>
+            <p class="subtitle">Form Submission Dashboard</p>
+        </header>
+
+        <!-- Connection Status -->
+        <div class="status-card">
+            <div id="connection-status" class="status disconnected">
+                <span class="dot"></span>
+                <span class="text">Connecting...</span>
+            </div>
+            <button id="enable-notifications" class="btn primary">
+                🔔 Enable Notifications
+            </button>
+        </div>
+
+        <!-- User ID Section -->
+        <div class="info-card">
+            <h2>👤 Your User ID</h2>
+            <div class="copy-box">
+                <code id="user-id">Loading...</code>
+                <button id="copy-userid" class="btn secondary">Copy</button>
+            </div>
+        </div>
+
+        <!-- Webhook URL Section -->
+        <div class="info-card">
+            <h2>🔗 Your Webhook URL</h2>
+            <div class="copy-box">
+                <code id="webhook-url">Loading...</code>
+                <button id="copy-webhook" class="btn secondary">Copy</button>
+            </div>
+            <p class="hint">Add this URL to your website form to receive notifications</p>
+        </div>
+
+        <!-- Test Form Section -->
+        <div class="test-section">
+            <h2>🧪 Test Notification</h2>
+            <form id="test-form">
+                <input type="text" name="name" placeholder="Enter test name" required>
+                <input type="email" name="email" placeholder="Enter test email" required>
+                <textarea name="message" placeholder="Enter test message"></textarea>
+                <button type="submit" class="btn primary full-width">
+                    Send Test Notification 🚀
+                </button>
+            </form>
+        </div>
+
+        <!-- Submissions List -->
+        <div class="submissions-section">
+            <h2>📋 Recent Submissions</h2>
+            <div id="submissions-list" class="submissions-list">
+                <p class="empty-state">No submissions yet. Try the test form above!</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>Crevate Technology © 2024</p>
+        </footer>
+    </div>
+
+    <!-- Firebase SDKs (using compat version for simplicity) -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.0/firebase-messaging-compat.js"></script>
+    
+    <!-- Your App Scripts -->
+    <script src="firebase-config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
