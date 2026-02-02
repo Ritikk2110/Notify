@@ -26,8 +26,8 @@ messaging.onBackgroundMessage(payload => {
     const notificationTitle = payload.notification?.title || 'New Submission!';
     const notificationOptions = {
         body: payload.notification?.body || 'You have a new form submission',
-        icon: '/icons/icon-192.png',
-        badge: '/icons/icon-72.png',
+        icon: 'logo.png',
+        badge: 'logo.png',
         vibrate: [200, 100, 200],
         tag: 'crevate-' + Date.now(),
         renotify: true
