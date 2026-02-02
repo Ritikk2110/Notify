@@ -26,10 +26,25 @@ header {
     padding: 40px 0 30px;
 }
 
-.logo {
-    font-size: 3rem;
-    margin-bottom: 15px;
+
+.logo{
+    border-radius: 20px;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    box-shadow: 0 4px 15px rgba(99, 102,
+241, 0.4);
     animation: bounce 2s infinite;
+
+}
+img{
+    width: 74px;
+    height: 73px;
+    border-radius: 20px;
 }
 
 @keyframes bounce {
